@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
-
 /**
  * Week 1 starter controller.
  * Already provided:
@@ -26,6 +25,11 @@ public class HelloController {
     @GetMapping("/status")
     public String status(){
         return "API running -" + LocalDate.now().toString();
+    }
+
+    @GetMapping("/goodbye")
+    public String goodbye() {
+        return "Goodbye from Spring Boot!";
     }
 
     // TODO (Activity 3): add your /goodbye endpoint here.
